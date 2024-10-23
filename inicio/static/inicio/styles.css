@@ -1,0 +1,131 @@
+@font-face {
+    font-family: 'Digital 7';
+    src: url("..fonts/digital-7.ttf") format('truetype'); /* Ajusta la ruta según sea necesario */
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: 'DS Digi';
+    src: url("{% static 'fonts/DS-DIGI.TTF' %}") format('truetype');
+    font-weight: normal; /* Peso normal */
+    font-style: normal; /* Estilo normal */
+}
+
+@font-face {
+    font-family: 'DS Digi';
+    src: url("{% static 'fonts/DS-DIGIB.TTF' %}") format('truetype');
+    font-weight: bold; /* Peso negrita */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DS Digi';
+    src: url("{% static 'fonts/DS-DIGII.TTF' %}") format('truetype');
+    font-weight: normal; /* Peso normal */
+    font-style: italic; /* Estilo cursiva */
+}
+
+@font-face {
+    font-family: 'DS Digi';
+    src: url("{% static 'fonts/DS-DIGIT.TTF' %}") format('truetype');
+    font-weight: bold; /* Peso negrita */
+    font-style: italic; /* Estilo cursiva */
+}
+
+
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Parte superior (fecha y hora) */
+.upper-section {
+    display: flex;
+    flex: 1;
+    background-color: #1e90ff;
+    color: white;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%; /* El primer cuarto para la fecha */
+}
+
+.date-item {
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif; 
+    margin: 5px 0; /* Espacio entre las líneas de la fecha */
+    font-weight: 700;
+}
+
+.time {
+    width: 75%; /* Los otros tres cuartos para la hora */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    display: flex; /* Habilita Flexbox */
+    align-items: center; /* Centra el contenido verticalmente */
+}
+
+/* Parte inferior (clima y pronósticos) */
+.lower-section {
+    display: flex;
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+/* Clima actual */
+.weather-current {
+    flex: 1;
+    background-color: #1e90ff;
+    color: white;
+    padding: 20px;
+    margin-right: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* Pronósticos */
+.forecast {
+    flex: 1;
+    background-color: #87cefa;
+    color: black;
+    padding: 20px;
+    margin-left: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* Estilos para texto dentro de cada sección */
+h1, h2 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+#hora {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 10rem; /* Ajusta el tamaño según sea necesario */
+    text-align: center; /* Centra el texto dentro del elemento */
+    white-space: nowrap; /* Evita que el texto se rompa en múltiples líneas */
+}
+
+
+p {
+    font-size: 1.5rem;
+}

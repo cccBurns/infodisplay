@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Display</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'inicio/styles.css' %}">
+</head>
+<body>
+    <!-- División de la pantalla en dos partes -->
+    <div class="container">
+        <!-- Parte superior: Fecha y hora -->
+         <!-- FECHA AQUI -->
+        <div class="upper-section">
+            <div class="date">
+                <div id="dia" class="date-item"></div>
+                <div id="mes" class="date-item"></div>
+                <div id="anio" class="date-item"></div>
+            </div>
+            <!-- HORA AQUI -->
+            <div class="time">
+                <h1 id="hora">00:00</h1>
+            </div>
+        </div>
+
+        <!-- Parte inferior: Clima actual y pronósticos -->
+        <div class="lower-section">
+            <div class="weather-current">
+                <h2>Clima Actual</h2>
+                <p id="current-weather">Cargando clima...</p>
+            </div>
+            <div class="forecast">
+                <h2 id="forecast-1">Cargando pronóstico...</h2>
+            </div>
+            <div class="forecast">
+                <h2 id="forecast-2">Cargando pronóstico...</h2>
+            </div>
+            <div class="forecast">
+                <h2 id="forecast-3">Cargando pronóstico...</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript para manejar la hora y el clima -->
+    <script src="{% static 'inicio/scripts.js' %}"></script>
+</body>
+</html>
