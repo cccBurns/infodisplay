@@ -1,52 +1,67 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Info Display</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'inicio/styles.css' %}">
 </head>
 <body>
-    <!-- División de la pantalla en dos partes -->
     <div class="container">
-        <!-- Parte superior: Fecha y hora -->
-         <!-- FECHA AQUI -->
         <div class="upper-section">
             <div class="date">
                 <div id="dia" class="date-item"></div>
                 <div id="mes" class="date-item"></div>
                 <div id="anio" class="date-item"></div>
             </div>
-            <!-- HORA AQUI -->
             <div class="time">
                 <h1 id="hora">00:00</h1>
             </div>
         </div>
 
-        <!-- Parte inferior: Clima actual y pronósticos -->
-        <div class="lower-section">
-            <div class="weather-current">
-                <h2>Clima Actual</h2>
-                <p id="current-weather">Cargando clima...</p>
-            </div>
-            <div class="forecast">
-                <h2 id="forecast-1">Cargando pronóstico...</h2>
-            </div>
-            <div class="forecast">
-                <h2 id="forecast-2">Cargando pronóstico...</h2>
-            </div>
-            <div class="forecast">
-                <h2 id="forecast-3">Cargando pronóstico...</h2>
-            </div>
-        </div>
+        <!-- CLIMA Y PRONOSTICO -->
+<div id="clima" class="clima-container">
+    <div class="clima-rectangulo" id="clima-actual">
+        <h3 id="current-day">Clima Actual</h3>
+        <img id="weather-icon" src="" alt="Icono del clima">
+        <p id="temperature">Ahora: --°C</p>
+        <p id="temp-max">Máx: --°C</p> <!-- Nueva línea para temperatura máxima -->
+        <p id="temp-min">Mín: --°C</p> <!-- Nueva línea para temperatura mínima -->
+        <p id="humidity">Humedad: --%</p>
+        <br>
     </div>
 
-    <!-- JavaScript para manejar la hora y el clima -->
+    <!-- Pronósticos -->
+    <div class="clima-rectangulo" id="pronostico-1d">
+        <h3 id="hora-24h">--/--/--</h3>
+        <img id="weather-icon-24h" src="" alt="Icono del clima">
+        <p id="temperature-24h">Max: --°C<br>Min: --°C</p>
+    </div>
+    <div class="clima-rectangulo" id="pronostico-2d">
+        <h3 id="hora-48h">--/--/--</h3>
+        <img id="weather-icon-48h" src="" alt="Icono del clima">
+        <p id="temperature-48h">Max: --°C<br>Min: --°C</p>
+    </div>
+    <div class="clima-rectangulo" id="pronostico-3d">
+        <h3 id="hora-72h">--/--/--</h3>
+        <img id="weather-icon-72h" src="" alt="Icono del clima">
+        <p id="temperature-72h">Max: --°C<br>Min: --°C</p>
+    </div>
+    <div class="clima-rectangulo" id="pronostico-4d">
+        <h3 id="hora-96h">--/--/--</h3>
+        <img id="weather-icon-96h" src="" alt="Icono del clima">
+        <p id="temperature-96h">Max: --°C<br>Min: --°C</p>
+    </div>
+</div>
+
+
+    </div>
+</div>
+    </div>
     <script src="{% static 'inicio/scripts.js' %}"></script>
 </body>
 </html>

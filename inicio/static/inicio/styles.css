@@ -1,46 +1,11 @@
-@font-face {
-    font-family: 'Digital 7';
-    src: url("..fonts/digital-7.ttf") format('truetype'); /* Ajusta la ruta según sea necesario */
-    font-weight: normal; 
-    font-style: normal; 
-}
-
-@font-face {
-    font-family: 'DS Digi';
-    src: url("{% static 'fonts/DS-DIGI.TTF' %}") format('truetype');
-    font-weight: normal; /* Peso normal */
-    font-style: normal; /* Estilo normal */
-}
-
-@font-face {
-    font-family: 'DS Digi';
-    src: url("{% static 'fonts/DS-DIGIB.TTF' %}") format('truetype');
-    font-weight: bold; /* Peso negrita */
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'DS Digi';
-    src: url("{% static 'fonts/DS-DIGII.TTF' %}") format('truetype');
-    font-weight: normal; /* Peso normal */
-    font-style: italic; /* Estilo cursiva */
-}
-
-@font-face {
-    font-family: 'DS Digi';
-    src: url("{% static 'fonts/DS-DIGIT.TTF' %}") format('truetype');
-    font-weight: bold; /* Peso negrita */
-    font-style: italic; /* Estilo cursiva */
-}
-
-
-
 /* Global styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
+    overflow-x: hidden; /* Evita el scroll horizontal */
+    overflow-y: hidden; /* Evita el scroll vertical */
 }
 
 .container {
@@ -56,7 +21,7 @@ body {
     background-color: #1e90ff;
     color: white;
     justify-content: space-between;
-    padding: 20px;
+    padding: 10px; /* Reducido el padding */
 }
 
 .date {
@@ -68,9 +33,9 @@ body {
 }
 
 .date-item {
-    font-size: 40px;
+    font-size: 30px; /* Reducido el tamaño de fuente */
     font-family: 'Poppins', sans-serif; 
-    margin: 5px 0; /* Espacio entre las líneas de la fecha */
+    margin: 2px 0; /* Espacio reducido entre las líneas de la fecha */
     font-weight: 700;
 }
 
@@ -81,51 +46,54 @@ body {
     align-items: center; /* Centra el contenido verticalmente */
 }
 
-/* Parte inferior (clima y pronósticos) */
-.lower-section {
+/* Clima actual y pronósticos */
+.clima-container {
     display: flex;
-    flex: 1;
-    background-color: #ffffff;
-    padding: 20px;
-    justify-content: space-between;
+    width: 100%;    
+    padding: 0;
+    margin: 0;
 }
 
-/* Clima actual */
-.weather-current {
+.clima-rectangulo {
+    background-color: #1e90ff; /* Fondo azul para los pronósticos */
     flex: 1;
-    background-color: #1e90ff;
-    color: white;
-    padding: 20px;
-    margin-right: 10px;
+    border: 4px solid #ffffff; /* Borde gris para los pronósticos */
+    padding: 3px; /* Reducido el padding */
+    margin: 0;
     text-align: center;
-    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 18px; /* Reducido el tamaño de fuente */
+    box-sizing: border-box;
 }
 
-/* Pronósticos */
-.forecast {
-    flex: 1;
-    background-color: #87cefa;
-    color: black;
-    padding: 20px;
-    margin-left: 10px;
-    text-align: center;
-    border-radius: 10px;
+#clima-actual {
+    background-color: #1e90ff; /* Fondo azul oscuro solo para clima actual */
+    border: 4px solid #ffffff; /* Borde grueso negro solo para clima actual */
+}
+
+.clima-rectangulo img {
+    width: 80px; /* Reducido el tamaño de las imágenes */
+    height: auto;
+    margin-bottom: 5px; /* Reducido el margen */
+}
+
+.clima-rectangulo p {
+    color: #ffffff; /* Texto negro para mejor visibilidad */
+    font-size: 18px; /* Reducido el tamaño de fuente */
+    margin: 2px 0; /* Espacio reducido entre párrafos */
 }
 
 /* Estilos para texto dentro de cada sección */
 h1, h2 {
     margin: 0;
-    font-size: 2rem;
+    font-size: 28px; /* Ajustado el tamaño de encabezados */
+    font-weight: bold;
 }
 
 #hora {
     font-family: 'Poppins', sans-serif; 
-    font-size: 10rem; /* Ajusta el tamaño según sea necesario */
+    font-size: 8rem; /* Ajusta el tamaño según sea necesario */
     text-align: center; /* Centra el texto dentro del elemento */
     white-space: nowrap; /* Evita que el texto se rompa en múltiples líneas */
-}
-
-
-p {
-    font-size: 1.5rem;
 }

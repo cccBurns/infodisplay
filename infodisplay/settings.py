@@ -127,3 +127,6 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Configuración de la API del clima
+WEATHER_API_KEY = 'd8iosk9t0xzut64mpn3d4pgnax0j01audfvp8q28'
