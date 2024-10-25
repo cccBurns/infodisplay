@@ -18,7 +18,7 @@ body {
 .upper-section {
     display: flex;
     flex: 1;
-    background-color: #1e90ff;
+    background-color: #000000;
     color: white;
     justify-content: space-between;
     padding: 10px; /* Reducido el padding */
@@ -55,7 +55,7 @@ body {
 }
 
 .clima-rectangulo {
-    background-color: #1e90ff; /* Fondo azul para los pronósticos */
+    background-color: #757576; /* Fondo azul para los pronósticos */
     flex: 1;
     border: 4px solid #ffffff; /* Borde gris para los pronósticos */
     padding: 3px; /* Reducido el padding */
@@ -75,7 +75,7 @@ body {
 .clima-rectangulo img {
     width: 80px; /* Reducido el tamaño de las imágenes */
     height: auto;
-    margin-bottom: 5px; /* Reducido el margen */
+    margin-bottom: 0px; /* Reducido el margen */
 }
 
 .clima-rectangulo p {
@@ -93,18 +93,19 @@ h1, h2 {
 
 /* Estilos para la hora */
 #hora {
-    font-family: 'Arial Black', Arial, sans-serif; /* Fuente para la hora */
-    font-size: 180px; /* Tamaño de fuente para horas y minutos */
+    font-family: 'Open Sans', sans-serif; /* Fuente para la hora */
+    font-size: 220px; /* Tamaño de fuente para horas y minutos */
     text-align: center; /* Centra el texto dentro del elemento */
     white-space: nowrap; /* Evita que el texto se rompa en múltiples líneas */
 }
 
 #segundos {
+    color: red;
     font-size: 0.8em; /* Tamaño más pequeño para los segundos */
 }
 
 #dosPuntosSegundos {
-    font-size: 0.8em; /* Tamaño más pequeño para los dos puntos */
+    font-size: 0.5em; /* Tamaño más pequeño para los dos puntos */
 }
 
 
