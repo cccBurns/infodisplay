@@ -27,10 +27,12 @@ function updateTime() {
     const hours = String(now.getHours()).padStart(2, '0');
     const minutes = String(now.getMinutes()).padStart(2, '0');
     const seconds = String(now.getSeconds()).padStart(2, '0');
-    document.getElementById('hora').textContent = `${hours}:${minutes}:${seconds}`;
+
+    document.getElementById('horas').textContent = hours;
+    document.getElementById('minutos').textContent = minutes;
+    document.getElementById('segundos').textContent = seconds;
 }
 
-updateTime();
 setInterval(updateTime, 1000);
 
 // Función para mostrar el día actual en el encabezado

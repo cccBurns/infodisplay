@@ -33,9 +33,9 @@ body {
 }
 
 .date-item {
-    font-size: 30px; /* Reducido el tamaño de fuente */
+    font-size: 50px; /* Reducido el tamaño de fuente */
     font-family: 'Poppins', sans-serif; 
-    margin: 2px 0; /* Espacio reducido entre las líneas de la fecha */
+    margin: 5px 0; /* Espacio reducido entre las líneas de la fecha */
     font-weight: 700;
 }
 
@@ -91,9 +91,20 @@ h1, h2 {
     font-weight: bold;
 }
 
+/* Estilos para la hora */
 #hora {
-    font-family: 'Poppins', sans-serif; 
-    font-size: 8rem; /* Ajusta el tamaño según sea necesario */
+    font-family: 'Arial Black', Arial, sans-serif; /* Fuente para la hora */
+    font-size: 180px; /* Tamaño de fuente para horas y minutos */
     text-align: center; /* Centra el texto dentro del elemento */
     white-space: nowrap; /* Evita que el texto se rompa en múltiples líneas */
 }
+
+#segundos {
+    font-size: 0.8em; /* Tamaño más pequeño para los segundos */
+}
+
+#dosPuntosSegundos {
+    font-size: 0.8em; /* Tamaño más pequeño para los dos puntos */
+}
+
+
