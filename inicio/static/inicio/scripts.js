@@ -1,24 +1,46 @@
 // ----------  FECHA AQUI  ------------
 
-function actualizarFecha() {
-    const diasSemana = ['DOMINGO', 'LUNES', 'MARTES', 'MIÉRCOLES', 'JUEVES', 'VIERNES', 'SÁBADO'];
-    const meses = ['ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO', 'AGOSTO', 'SEPTIEMBRE', 'OCTUBRE', 'NOVIEMBRE', 'DICIEMBRE'];
+function updateCalendar() {
+    const now = new Date();
+    const month = now.getMonth(); // Mes actual
+    const year = now.getFullYear(); // Año actual
+    const firstDay = new Date(year, month, 1).getDay(); // Día de la semana del primer día del mes
+    const daysInMonth = new Date(year, month + 1, 0).getDate(); // Días en el mes
 
-    const fechaActual = new Date();
-    const diaSemana = diasSemana[fechaActual.getDay()];
-    const diaMes = fechaActual.getDate();
-    const mes = meses[fechaActual.getMonth()];
-    const anio = fechaActual.getFullYear();
+    // Actualiza el encabezado con el mes y el año
+    const monthNames = ["ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", 
+                        "JULIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"];
+    document.getElementById("month-year").textContent = `${monthNames[month]} ${year}`;
 
-    document.getElementById('dia').textContent = `${diaSemana} ${diaMes}`;
-    document.getElementById('mes').textContent = mes;
-    document.getElementById('anio').textContent = anio;
+    // Genera los días en el almanaque
+    const calendar = document.getElementById("calendar");
+    calendar.innerHTML = ""; // Limpia el contenido previo
+
+    // Espacios en blanco para los días anteriores
+    for (let i = 0; i < firstDay; i++) {
+        const emptyDay = document.createElement("div");
+        calendar.appendChild(emptyDay); // Espacio vacío
+    }
+
+    // Agrega los días del mes
+    for (let day = 1; day <= daysInMonth; day++) {
+        const dayElement = document.createElement("div");
+        dayElement.className = "calendar-day";
+        dayElement.textContent = day;
+
+        // Marca el día actual
+        if (day === now.getDate()) {
+            dayElement.classList.add("today");
+        }
+
+        calendar.appendChild(dayElement);
+    }
 }
 
-window.onload = function() {
-    actualizarFecha();
-    setInterval(actualizarFecha, 60000);
-};
+// Llama a la función al cargar la página y luego cada día
+updateCalendar();
+
+
 
 // ----------  HORA AQUI  ------------
 
