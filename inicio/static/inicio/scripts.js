@@ -55,6 +55,7 @@ async function obtenerClima() {
 
     } catch (error) {
         console.error('Error:', error);
+        alert('No se pudo obtener el clima. Intenta nuevamente más tarde.'); // Mostrar error al usuario
     }
 }
 
@@ -86,6 +87,7 @@ async function obtenerPronostico() {
 
     } catch (error) {
         console.error('Error:', error);
+        alert('No se pudo obtener el pronóstico. Intenta nuevamente más tarde.'); // Mostrar error al usuario
     }
 }
 
@@ -94,4 +96,39 @@ document.addEventListener('DOMContentLoaded', (event) => {
     obtenerClima();
 });
 
+// Actualiza el clima cada 10 minutos
 setInterval(obtenerClima, 600000);
+
+// Cambia el color de los segundos y el fondo del clima al presionar el botón
+const colorToggleBtn = document.getElementById('color-toggle');
+let colorState = 0; // 0: azul claro, 1: rojo suave, 2: verde suave
+
+colorToggleBtn.addEventListener('click', () => {
+    const segundos = document.getElementById('segundos');
+    const climaActual = document.getElementById('clima-actual');
+
+    colorState = (colorState + 1) % 4; // Incrementa el estado y vuelve a 0 si llega a 3
+
+    switch (colorState) {
+        case 0: // Azul claro
+            segundos.style.color = '#1e90ff'; // Color para los segundos
+            climaActual.style.backgroundColor = '#1e90ff'; // Color original para el fondo del clima
+            colorToggleBtn.style.backgroundColor = '#1e90ff'; // Color del botón
+            break;
+        case 1: // Blanco
+            segundos.style.color = '#ffffff'; // Cambia a rojo suave
+            climaActual.style.backgroundColor = '#929292'; // Cambia el fondo a rojo suave
+            colorToggleBtn.style.backgroundColor = '#484848'; // Color del botón
+            break;
+        case 2: // Verde suave
+            segundos.style.color = '#4caf50'; // Cambia a verde suave
+            climaActual.style.backgroundColor = '#4caf50'; // Cambia el fondo a verde suave
+            colorToggleBtn.style.backgroundColor = '#4caf50'; // Color del botón
+            break;
+        case 3: // Violeta claro
+            segundos.style.color = '#8535c6'; // Color para los segundos
+            climaActual.style.backgroundColor = '#8535c6'; // Color del fondo del clima
+            colorToggleBtn.style.backgroundColor = '#8535c6'; // Color del botón
+            break;
+    }
+});

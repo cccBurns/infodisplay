@@ -85,3 +85,18 @@ h1, h2 {
     margin: 0;
     font-weight: bold;
 }
+
+
+/* Estilos para el botón de cambio de color */
+.color-toggle-button {
+    position: absolute;
+    top: 20px; /* Distancia desde la parte superior */
+    right: 20px; /* Distancia desde la derecha */
+    width: 40px; /* Ancho del botón */
+    height: 40px; /* Alto del botón */
+    background-color: #1e90ff; /* Color inicial del botón */
+    border: none; /* Sin borde */
+    border-radius: 50%; /* Botón circular */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    z-index: 10; /* Asegúrate de que esté en la parte superior */
+}
