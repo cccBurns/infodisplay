@@ -35,7 +35,7 @@ body {
 
 .time {
     font-family: 'Open Sans', sans-serif;
-    font-size: 120px; /* Aumentado el tamaño de la hora */
+    font-size: 130px; /* Aumentado el tamaño de la hora */
     color: white; /* Color de la hora en blanco */
     display: flex; /* Habilita Flexbox */
     align-items: baseline; /* Centra verticalmente el contenido */
