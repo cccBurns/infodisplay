@@ -10,81 +10,57 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100vh; /* Altura total de la ventana */
 }
 
 /* Parte superior (fecha y hora) */
 .upper-section {
     display: flex;
-    flex: 1;
-    background-color: #000000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centra verticalmente el contenido */
+    background-color: #000000; /* Fondo negro */
     color: white;
-    justify-content: space-between;
-    padding: 10px; /* Reducido el padding */
+    flex: 2; /* Ocupa más altura que el clima */
+    text-align: center;
+    padding: 20px; /* Añadido espacio interno */
 }
 
-.date {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 25%; /* El primer cuarto para la fecha */
-    margin-left: 20px;
+.fecha {
+    font-size: 48px; /* Tamaño de la fecha */
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px; /* Espacio entre la fecha y la hora */
 }
 
 .time {
-    width: 75%; /* Los otros tres cuartos para la hora */
-    justify-content: center; /* Centra el contenido horizontalmente */
+    font-size: 140px; /* Aumentado el tamaño de la hora */
+    color: white; /* Color de la hora en blanco */
     display: flex; /* Habilita Flexbox */
-    align-items: center; /* Centra el contenido verticalmente */
+    align-items: baseline; /* Centra verticalmente el contenido */
+    justify-content: center; /* Asegura que la hora esté centrada horizontalmente */
 }
 
-/*   -------- CALENDIARIO -------- */
-
-.calendar-header {
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    font-size: 40px; /* Tamaño de fuente para mes y año */
-    font-weight: bold;
-    color: #ffffff; /* Color del texto */
-    margin-bottom: 20px; /* Espacio debajo del mes/año */
+#segundos {
+    color: #1e90ff; /* Color celeste para los segundos */
+    font-size: 0.8em; /* Tamaño más pequeño para los segundos */
 }
 
-.calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr); /* 7 columnas para los días de la semana */
-    gap: 5px; /* Espacio entre los días */
-}
-
-.calendar-day {
-    background-color: #757576; /* Fondo de cada día */
-    color: white; /* Color del texto */
-    padding: 15px; /* Espaciado interno */
-    text-align: center; /* Centra el texto */
-    border-radius: 4px; /* Bordes redondeados */
-    font-weight: bold;
-}
-
-.today {
-    background-color: #1e90ff; /* Color diferente para el día actual */
-    font-weight: bold; /* Negrita para el día actual */
-}
-
-/* Clima actual y pronósticos */
+/* Parte inferior (clima) */
 .clima-container {
     display: flex;
-    width: 100%;    
+    flex: 1; /* Ocupa menos altura que la sección superior */
 }
 
 .clima-rectangulo {
-    background-color: #757576; /* Fondo azul para los pronósticos */
+    background-color: #757576; /* Fondo para los pronósticos */
     flex: 1;
     border: 4px solid #ffffff; /* Borde blanco para los pronósticos */
-    padding: 3px; /* Reducido el padding */
+    padding: 3px;
     text-align: center;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
-    font-size: 18px; /* Reducido el tamaño de fuente */
+    font-size: 18px;
     box-sizing: border-box;
 }
 
@@ -107,19 +83,5 @@ body {
 /* Estilos para texto dentro de cada sección */
 h1, h2 {
     margin: 0;
-    font-size: 28px; /* Ajustado el tamaño de encabezados */
     font-weight: bold;
-}
-
-/* Estilos para la hora */
-#hora {
-    font-family: 'Open Sans', sans-serif; /* Fuente para la hora */
-    font-size: 220px; /* Tamaño de fuente para horas y minutos */
-    text-align: center; /* Centra el texto dentro del elemento */
-    white-space: nowrap; /* Evita que el texto se rompa en múltiples líneas */
-}
-
-#segundos {
-    color: red;
-    font-size: 0.8em; /* Tamaño más pequeño para los segundos */
 }

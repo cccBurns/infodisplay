@@ -14,61 +14,49 @@
 <body>
     <div class="container">
         <div class="upper-section">
-            <div class="date">
-                <div class="calendar-header">
-                    <h2 id="month-year"></h2> <!-- Mes y Año -->
+            <div class="date-time">
+                <h2 id="fecha" class="fecha">5 NOVIEMBRE 2024</h2> <!-- Nueva línea para la fecha -->
+                <div class="time">
+                    <h1 id="hora">
+                        <span id="horas">00</span>:<span id="minutos">00</span>:<span id="segundos">00</span>
+                    </h1>
                 </div>
-                <div class="calendar-grid" id="calendar"></div> <!-- Almanaque -->
-            </div>
-        
-            <div class="time">
-                <h1 id="hora">
-                    <span id="horas">00</span>:<span id="minutos">00</span>:<span id="segundos">00</span>
-                </h1>
             </div>
         </div>
-        
-        
-        
 
         <!-- CLIMA Y PRONOSTICO -->
-<div id="clima" class="clima-container">
-    <div class="clima-rectangulo" id="clima-actual">
-        <h3 id="current-day">Clima Actual</h3>
-        <img id="weather-icon" src="" alt="Icono del clima">
-        <p id="temperature">Ahora: --°C</p>
-        <p id="temp-max">Máx: --°C</p> <!-- Nueva línea para temperatura máxima -->
-        <p id="temp-min">Mín: --°C</p> <!-- Nueva línea para temperatura mínima -->
-        <p id="humidity">Humedad: --%</p>
-        <br>
-    </div>
+        <div id="clima" class="clima-container">
+            <div class="clima-rectangulo" id="clima-actual">
+                <h3 id="current-day">Clima Actual</h3>
+                <img id="weather-icon" src="" alt="Icono del clima">
+                <p id="temperature">Ahora: --°C</p>
+                <p id="temp-max">Máx: --°C</p>
+                <p id="temp-min">Mín: --°C</p>
+                <p id="humidity">Humedad: --%</p>
+            </div>
 
-    <!-- Pronósticos -->
-    <div class="clima-rectangulo" id="pronostico-1d">
-        <h3 id="hora-24h">--/--/--</h3>
-        <img id="weather-icon-24h" src="" alt="Icono del clima">
-        <p id="temperature-24h">Max: --°C<br>Min: --°C</p>
-    </div>
-    <div class="clima-rectangulo" id="pronostico-2d">
-        <h3 id="hora-48h">--/--/--</h3>
-        <img id="weather-icon-48h" src="" alt="Icono del clima">
-        <p id="temperature-48h">Max: --°C<br>Min: --°C</p>
-    </div>
-    <div class="clima-rectangulo" id="pronostico-3d">
-        <h3 id="hora-72h">--/--/--</h3>
-        <img id="weather-icon-72h" src="" alt="Icono del clima">
-        <p id="temperature-72h">Max: --°C<br>Min: --°C</p>
-    </div>
-    <div class="clima-rectangulo" id="pronostico-4d">
-        <h3 id="hora-96h">--/--/--</h3>
-        <img id="weather-icon-96h" src="" alt="Icono del clima">
-        <p id="temperature-96h">Max: --°C<br>Min: --°C</p>
-    </div>
-</div>
-
-
-    </div>
-</div>
+            <!-- Pronósticos -->
+            <div class="clima-rectangulo" id="pronostico-1d">
+                <h3 id="hora-24h">--/--/--</h3>
+                <img id="weather-icon-24h" src="" alt="Icono del clima">
+                <p id="temperature-24h">Max: --°C<br>Min: --°C</p>
+            </div>
+            <div class="clima-rectangulo" id="pronostico-2d">
+                <h3 id="hora-48h">--/--/--</h3>
+                <img id="weather-icon-48h" src="" alt="Icono del clima">
+                <p id="temperature-48h">Max: --°C<br>Min: --°C</p>
+            </div>
+            <div class="clima-rectangulo" id="pronostico-3d">
+                <h3 id="hora-72h">--/--/--</h3>
+                <img id="weather-icon-72h" src="" alt="Icono del clima">
+                <p id="temperature-72h">Max: --°C<br>Min: --°C</p>
+            </div>
+            <div class="clima-rectangulo" id="pronostico-4d">
+                <h3 id="hora-96h">--/--/--</h3>
+                <img id="weather-icon-96h" src="" alt="Icono del clima">
+                <p id="temperature-96h">Max: --°C<br>Min: --°C</p>
+            </div>
+        </div>
     </div>
     <script src="{% static 'inicio/scripts.js' %}"></script>
 </body>
