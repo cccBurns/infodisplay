@@ -116,8 +116,8 @@ colorToggleBtn.addEventListener('click', () => {
             colorToggleBtn.style.backgroundColor = '#1e90ff'; // Color del botón
             break;
         case 1: // Blanco
-            segundos.style.color = '#ffffff'; // Cambia a rojo suave
-            climaActual.style.backgroundColor = '#929292'; // Cambia el fondo a rojo suave
+            segundos.style.color = '#ffffff'; // Cambia a Blanco
+            climaActual.style.backgroundColor = '#929292'; // Cambia el fondo a Gris
             colorToggleBtn.style.backgroundColor = '#484848'; // Color del botón
             break;
         case 2: // Verde suave
@@ -125,7 +125,7 @@ colorToggleBtn.addEventListener('click', () => {
             climaActual.style.backgroundColor = '#4caf50'; // Cambia el fondo a verde suave
             colorToggleBtn.style.backgroundColor = '#4caf50'; // Color del botón
             break;
-        case 3: // Violeta claro
+        case 3: // Violeta
             segundos.style.color = '#8535c6'; // Color para los segundos
             climaActual.style.backgroundColor = '#8535c6'; // Color del fondo del clima
             colorToggleBtn.style.backgroundColor = '#8535c6'; // Color del botón
