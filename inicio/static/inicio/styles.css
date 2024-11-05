@@ -23,18 +23,19 @@ body {
     color: white;
     flex: 2; /* Ocupa más altura que el clima */
     text-align: center;
-    padding: 20px; /* Añadido espacio interno */
+    padding: 0px; /* Añadido espacio interno */
 }
 
 .fecha {
     font-size: 48px; /* Tamaño de la fecha */
     font-weight: bold;
     letter-spacing: 2px;
-    margin-bottom: 10px; /* Espacio entre la fecha y la hora */
+    margin-bottom: 0px; /* Espacio entre la fecha y la hora */
 }
 
 .time {
-    font-size: 140px; /* Aumentado el tamaño de la hora */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 120px; /* Aumentado el tamaño de la hora */
     color: white; /* Color de la hora en blanco */
     display: flex; /* Habilita Flexbox */
     align-items: baseline; /* Centra verticalmente el contenido */
@@ -43,6 +44,7 @@ body {
 
 #segundos {
     color: #1e90ff; /* Color celeste para los segundos */
+    font-family: 'Open Sans', sans-serif;
     font-size: 0.8em; /* Tamaño más pequeño para los segundos */
 }
 
