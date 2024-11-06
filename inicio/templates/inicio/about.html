@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Display</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-whateverHash" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'inicio/styles.css' %}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="/" id="navbar-logo">INFO <span>DISPLAY</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link" href="/about/">ABOUT US</a>          
+              <a class="nav-link" href="/contacto/">CONTACTO</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    
+      
+      
+      
+      <section class="about" id="about">
+          <div class="about-content container">
+              <div class="about-txt">
+                  <span>Info <span class="gym">Display</span></span>
+                  <h2>Quienes somos</h2>
+                  <hr>
+                  <p>Ubicado en la sede del histórico Club Banfield (Vergara 1635), nuestro gimnasio es mucho más que un simple lugar para entrenar: es un centro de entrenamiento de alto rendimiento. Nos especializamos en brindar programas de entrenamiento diseñados para mejorar la fuerza, el equilibrio, la potencia y la hipertrofia muscular, además de enfocarnos en la quema de grasa.</p>
+                  <br>
+                  <p>Con un equipo de entrenadores profesionales altamente capacitados, ofrecemos rutinas personalizadas que te ayudarán a alcanzar tus objetivos, ya seas un atleta experimentado o alguien que recién comienza su camino hacia un estilo de vida más saludable.</p>
+                  <br>
+                  <p>Nuestras instalaciones modernas están completamente equipadas para cubrir todas tus necesidades, desde el entrenamiento funcional hasta el levantamiento de pesas. En el corazón de Banfield, nos enorgullece ser un espacio donde la comunidad se une para mejorar su rendimiento físico en un ambiente motivador y acogedor.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Nueva sección de imágenes -->
+        <section class="about-gallery" id="gallery">
+            <div class="gallery-container">
+                <div class="gallery-row">
+                    <div class="gallery-img">
+                        <img src="{% static 'core/assets/img/gimnasio1.jpg' %}" alt="Gimnasio Foto 1">
+                    </div>
+                    <div class="gallery-img">
+                        <img src="{% static 'core/assets/img/f1.jpg' %}" alt="Gimnasio Foto 2">
+                    </div>
+                </div>
+                <div class="gallery-row">
+                    <div class="gallery-img">
+                        <img src="{% static 'core/assets/img/b3.jpg' %}" alt="Gimnasio Foto 3">
+                    </div>
+                    <div class="gallery-img">
+                        <img src="{% static 'core/assets/img/f2.jpg' %}" alt="Gimnasio Foto 4">
+                    </div>
+                </div>
+            </div>
+        </section>        
+        
+        <footer class="footer">        
+            <div class="social">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            
+            <ul>
+                <li>
+                    <a href="{% url 'inicio' %}">Home</a>
+                </li>
+                <li>
+                    <a href="{% url 'about' %}">About Us</a>
+                </li>        
+                <li>
+                    <a href="{% url 'contacto' %}">Contacto</a>
+                </li>
+            </ul>
+            
+            <p class="copyright">
+                Banfield Gym Argentina 2023 ® todos los derechos reservados
+            </p>
+        </footer>
+    </body>
